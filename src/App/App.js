@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <button className="btn btn-info">Hello</button>
+        <button className="btn btn-info">Fish Store</button>
       </header>
     </div>
   );
