@@ -11,10 +11,18 @@ import './Home.scss';
 class Home extends React.Component {
   render() {
     return (
-      <div className="Home d-flex">
-        <Inventory />
-        <NewOrder />
-        <Orders />
+      <div className="Home">
+        <div className="row">
+          <div className="col">
+            <Inventory />
+          </div>
+          <div className="col">
+            <NewOrder />
+          </div>
+          <div className="col">
+            <Orders />
+          </div>
+        </div>
       </div>
     );
   }

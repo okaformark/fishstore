@@ -1,13 +1,13 @@
 import React from 'react';
 
-class NewOrders extends React.Component {
+class NewOrder extends React.Component {
   render() {
     return (
-      <div className="NewOrder col-4">
+      <div className="NewOrder">
         <h2>NewOrder</h2>
       </div>
     );
   }
 }
 
-export default NewOrders;
+export default NewOrder;
