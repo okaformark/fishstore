@@ -4,7 +4,7 @@ class NewOrder extends React.Component {
   render() {
     return (
       <div className="NewOrder">
-        <h2>NewOrder</h2>
+        <h1>NewOrder</h1>
       </div>
     );
   }
