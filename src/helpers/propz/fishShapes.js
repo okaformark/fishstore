@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const fishShape = PropTypes.shape({ 
+const fishShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
@@ -9,4 +9,4 @@ const fishShape = PropTypes.shape({
 });
 
 
-export default { fishShape }
+export default { fishShape };
