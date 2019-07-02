@@ -3,11 +3,19 @@ import format from '../../helpers/format';
 import './NewOrder.scss';
 
 class NewOrder extends React.Component {
+  state = {
+    orderName: '',
+  }
+
   renderOrder = (key) => {
     const fish = this.props.fishes.find(x => x.id === key);
     const count = this.props.fishOrder[key];
+    const xClickFunction = (e) => {
+      e.preventDefault();
+      this.props.removeFromOrder(key);
+    };
     return (
-      <li>
+      <li className="row" key={key}>
         <div className="col-2 count">
           {count} lbs
         </div>
@@ -18,7 +26,7 @@ class NewOrder extends React.Component {
           {format.formatPrice(fish.price * count)}
         </div>
         <div className="col-2">
-      <button className="btn btn-outline-danger">X</button>
+      <button className="btn btn-outline-danger" onClick={xClickFunction}>X</button>
         </div>
       </li>
     );
