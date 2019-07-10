@@ -2,11 +2,13 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import orderShapes from '../../helpers/propz/orderShapes';
+import './OrderRow.scss';
 
 class OrderRow extends React.Component {
   static propTypes = {
     order: orderShapes.orderShape,
     deleteOrder: PropTypes.func.isRequired,
+    selectOrderToEdit: PropTypes.func.isRequired,
   }
 
   deleteOrderEvent = (e) => {

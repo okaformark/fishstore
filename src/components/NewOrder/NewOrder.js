@@ -1,8 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import fishShapes from '../../helpers/propz/fishShapes';
 import format from '../../helpers/format';
 import './NewOrder.scss';
 
 class NewOrder extends React.Component {
+  static propTypes = {
+    fishes: PropTypes.arrayOf(fishShapes.fishShape),
+    fishOrder: PropTypes.object.isRequired,
+    orderEditing: PropTypes.object.isRequired,
+    removeFromOrder: PropTypes.func.isRequired,
+    saveNewOrder: PropTypes.func.isRequired,
+  }
+
   state = {
     orderName: '',
   }
@@ -66,6 +77,7 @@ class NewOrder extends React.Component {
         <form className='col-6 offset-3'>
           <div className="form-group">
             <label htmlFor="order-name">Order Name:</label>
+            <label htmlFor="order-name"><h4>Order Name:</h4></label>
             <input
               type="text"
               className="form-control"
